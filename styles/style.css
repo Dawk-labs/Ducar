@@ -2,10 +2,11 @@
   width: 100%;
   height: 100vh;
   margin: 0;
+  position: fixed;
 }
 
 .main > #backgroundImage {
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -58,28 +59,68 @@
   background: linear-gradient(89.6deg, #3426c8 2.76%, #03f0ff 99.96%);
 }
 
-.main .home {
+.main .slider {
+  position: relative;
   width: 100%;
-  height: 100vh;
+}
+
+.main .slider button {
+  cursor: pointer;
+  background-color: rgba(1, 1, 1, 0);
+  border-color: rgba(1, 1, 1, 0);
+}
+
+.main .slider button:focus {
+  border-color: rgba(1, 1, 1, 0);
+}
+
+.main .slider .right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 15%;
   z-index: 3;
 }
 
-.main .home header {
+.main .slider .left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  z-index: 2;
+}
+
+.main .slider .content-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400%;
+  overflow: hidden;
+  -webkit-transition: 20s alternate linear;
+  transition: 20s alternate linear;
+}
+
+.main .slider .content-slider .slider {
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+  position: relative;
+}
+
+.main .slider .content-slider .slider header {
   position: relative;
   width: 50%;
   height: 50%;
-  left: 25%;
+  left: 20%;
   top: 25%;
 }
 
-.main .home header p:first-child {
+.main .slider .content-slider .slider header p:first-child {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 600;
   color: white;
 }
 
-.main .home header h1 {
+.main .slider .content-slider .slider header h1 {
   font-family: "Archivo Black", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -90,7 +131,7 @@
   margin: 0.3em 0;
 }
 
-.main .home header .subheader {
+.main .slider .content-slider .slider header .subheader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,16 +141,16 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 30%;
+  width: 15%;
 }
 
-.main .home header .subheader span {
+.main .slider .content-slider .slider header .subheader span {
   font-family: "Anton", sans-serif;
   color: white;
   font-size: 78.4px;
 }
 
-.main .home header .subheader p {
+.main .slider .content-slider .slider header .subheader p {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -120,15 +161,15 @@
   color: #ffffff;
 }
 
-.main .home img {
+.main .slider .content-slider .slider img {
   z-index: 2;
   position: absolute;
-  top: 15%;
+  top: 17%;
   left: 50%;
-  height: 70%;
+  height: 85%;
 }
 
-.main .home .rounded-button {
+.main .slider .content-slider .slider .rounded-button {
   position: relative;
   font-family: "Anton";
   font-style: normal;
@@ -140,7 +181,7 @@
   border-radius: 10px;
   background: #01245e;
   letter-spacing: 1.35px;
-  padding: 1rem;
+  padding: 0.3rem;
   -webkit-box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
           box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
   border: solid 3px transparent;
@@ -149,5 +190,88 @@
   background-clip: content-box, border-box;
   -webkit-box-shadow: 2px 1000px 1px #022055 inset;
           box-shadow: 2px 1000px 1px #022055 inset;
+}
+
+.main .slider .content-slider .slider.second {
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+  position: relative;
+}
+
+.main .slider .content-slider .slider.second h1 {
+  font-size: 65px;
+}
+
+.main .slider .content-slider .slider.second img {
+  height: 65%;
+  top: 27%;
+  left: 40%;
+}
+
+.main .slider .content-slider .slider.second .subheader {
+  position: relative;
+  top: -2%;
+  width: 80%;
+}
+
+.main .slider .content-slider .slider.second .subheader p {
+  font-size: 20px;
+}
+
+.main .slider .content-slider .slider.third {
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+  position: relative;
+}
+
+.main .slider .content-slider .slider.third img {
+  top: 22%;
+  left: 45%;
+}
+
+.main .slider .content-slider .slider.third .subheader {
+  width: 60%;
+}
+
+.main .slider .content-slider .slider.fourth {
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+  position: relative;
+}
+
+.main .slider .content-slider .slider.fourth img {
+  top: 1%;
+  left: 45%;
+  height: 120%;
+}
+
+.main .slider .content-slider .slider.fourth .subheader {
+  width: 60%;
+}
+
+.main .slider .slide-indicator {
+  position: relative;
+  top: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .slider .slide-indicator span {
+  margin-left: 2em;
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 20px;
+  height: 20px;
 }
 /*# sourceMappingURL=style.css.map */
