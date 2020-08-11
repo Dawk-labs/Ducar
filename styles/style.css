@@ -77,15 +77,37 @@
 .main .slider .right-arrow {
   position: absolute;
   top: 50%;
-  right: 15%;
   z-index: 3;
+}
+
+@media only screen and (min-width: 768px) {
+  .main .slider .right-arrow {
+    right: 5%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main .slider .right-arrow {
+    right: 10%;
+  }
 }
 
 .main .slider .left-arrow {
   position: absolute;
   top: 50%;
-  left: 15%;
   z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .main .slider .left-arrow {
+    left: 5%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main .slider .left-arrow {
+    left: 10%;
+  }
 }
 
 .main .slider .content-slider {
@@ -94,8 +116,6 @@
   display: flex;
   width: 400%;
   overflow: hidden;
-  -webkit-transition: 20s alternate linear;
-  transition: 20s alternate linear;
 }
 
 .main .slider .content-slider .slider {
@@ -109,26 +129,87 @@
   position: relative;
   width: 50%;
   height: 50%;
-  left: 20%;
+  left: 15%;
   top: 25%;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .main .slider .content-slider .slider header {
+    width: 25%;
+    left: 10%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main .slider .content-slider .slider header {
+    width: 50%;
+    left: 10%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main .slider .content-slider .slider header {
+    width: 50%;
+    left: 15%;
+  }
 }
 
 .main .slider .content-slider .slider header p:first-child {
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
   color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .main .slider .content-slider .slider header p:first-child {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main .slider .content-slider .slider header p:first-child {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main .slider .content-slider .slider header p:first-child {
+    font-size: 1.5rem;
+  }
 }
 
 .main .slider .content-slider .slider header h1 {
   font-family: "Archivo Black", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 71.0251px;
-  line-height: 77px;
+  font-size: 4.5rem;
+  line-height: 4.8rem;
   color: white;
   letter-spacing: 5.4px;
   margin: 0.3em 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .main .slider .content-slider .slider header h1 {
+    font-size: 3rem;
+    line-height: 3.3rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main .slider .content-slider .slider header h1 {
+    font-size: 3.5rem;
+    line-height: 3.8rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main .slider .content-slider .slider header h1 {
+    font-size: 4.5rem;
+    line-height: 4.8rem;
+  }
 }
 
 .main .slider .content-slider .slider header .subheader {
@@ -138,10 +219,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 15%;
 }
 
 .main .slider .content-slider .slider header .subheader span {
@@ -154,9 +231,10 @@
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 21.5493px;
-  line-height: 29px;
+  font-size: 1.35rem;
+  line-height: 1.81rem;
   /* or 136% */
+  padding-left: 1rem;
   letter-spacing: 1.65px;
   color: #ffffff;
 }
@@ -165,7 +243,7 @@
   z-index: 2;
   position: absolute;
   top: 17%;
-  left: 50%;
+  left: 55%;
   height: 85%;
 }
 
@@ -199,8 +277,25 @@
   position: relative;
 }
 
-.main .slider .content-slider .slider.second h1 {
-  font-size: 65px;
+@media only screen and (min-width: 768px) {
+  .main .slider .content-slider .slider.second header h1 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main .slider .content-slider .slider.second header h1 {
+    font-size: 3.2rem;
+    line-height: 3.1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main .slider .content-slider .slider.second header h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+  }
 }
 
 .main .slider .content-slider .slider.second img {
@@ -212,11 +307,28 @@
 .main .slider .content-slider .slider.second .subheader {
   position: relative;
   top: -2%;
-  width: 80%;
+  width: 90%;
 }
 
-.main .slider .content-slider .slider.second .subheader p {
-  font-size: 20px;
+@media only screen and (min-width: 768px) {
+  .main .slider .content-slider .slider.second .subheader p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main .slider .content-slider .slider.second .subheader p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main .slider .content-slider .slider.second .subheader p {
+    font-size: 1.35rem;
+    line-height: 1.81rem;
+  }
 }
 
 .main .slider .content-slider .slider.third {
@@ -226,6 +338,18 @@
   position: relative;
 }
 
+@media only screen and (min-width: 768px) {
+  .main .slider .content-slider .slider.third .subheader p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main .slider .content-slider .slider.third .subheader p {
+    font-size: 1.35rem;
+  }
+}
+
 .main .slider .content-slider .slider.third img {
   top: 22%;
   left: 45%;
@@ -233,6 +357,7 @@
 
 .main .slider .content-slider .slider.third .subheader {
   width: 60%;
+  left: 7%;
 }
 
 .main .slider .content-slider .slider.fourth {

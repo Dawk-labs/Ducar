@@ -1,3 +1,26 @@
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin tabletOnly {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
 .main {
   width: 100%;
   height: 100vh;
@@ -66,21 +89,30 @@
     .right-arrow {
       position: absolute;
       top: 50%;
-      right: 15%;
       z-index: 3;
+      @include tablet {
+        right: 5%;
+      }
+      @include large {
+        right: 10%;
+      }
     }
     .left-arrow {
       position: absolute;
       top: 50%;
-      left: 15%;
       z-index: 2;
+      @include tablet {
+        left: 5%;
+      }
+      @include large {
+        left: 10%;
+      }
     }
 
     .content-slider {
       display: flex;
       width: 400%;
       overflow: hidden;
-      transition: 20s alternate linear;
       .slider {
         width: 100%;
         height: 80vh;
@@ -90,30 +122,67 @@
           position: relative;
           width: 50%;
           height: 50%;
-          left: 20%;
+          left: 15%;
           top: 25%;
+          white-space: nowrap;
+          @include tablet {
+            width: 25%;
+            left: 10%;
+          }
+          @include desktop {
+            width: 50%;
+            left: 10%;
+          }
+
+          @include large {
+            width: 50%;
+            left: 15%;
+          }
 
           p:first-child {
             font-family: "Montserrat", sans-serif;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 600;
             color: white;
+            @include tablet {
+              font-size: 1rem;
+            }
+            @include desktop {
+              font-size: 1.3rem;
+            }
+
+            @include large {
+              font-size: 1.5rem;
+            }
           }
           h1 {
             font-family: "Archivo Black", sans-serif;
             font-style: normal;
             font-weight: normal;
-            font-size: 71.0251px;
-            line-height: 77px;
+            font-size: 4.5rem;
+
+            line-height: 4.8rem;
             color: white;
             letter-spacing: 5.4px;
             margin: 0.3em 0;
+
+            @include tablet {
+              font-size: 3rem;
+              line-height: 3.3rem;
+            }
+            @include desktop {
+              font-size: 3.5rem;
+              line-height: 3.8rem;
+            }
+
+            @include large {
+              font-size: 4.5rem;
+              line-height: 4.8rem;
+            }
           }
           .subheader {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            width: 15%;
 
             span {
               font-family: "Anton", sans-serif;
@@ -124,9 +193,10 @@
               font-family: "Montserrat", sans-serif;
               font-style: normal;
               font-weight: 600;
-              font-size: 21.5493px;
-              line-height: 29px;
+              font-size: 1.35rem;
+              line-height: 1.81rem;
               /* or 136% */
+              padding-left: 1rem;
 
               letter-spacing: 1.65px;
 
@@ -139,7 +209,7 @@
           z-index: 2;
           position: absolute;
           top: 17%;
-          left: 50%;
+          left: 55%;
           height: 85%;
         }
         .rounded-button {
@@ -175,9 +245,25 @@
           height: 80vh;
           z-index: 1;
           position: relative;
-          h1 {
-            font-size: 65px;
+          header {
+            h1 {
+              @include tablet {
+                font-size: 1rem;
+                line-height: 1.4rem;
+              }
+              @include desktop {
+                font-size: 3.2rem;
+                line-height: 3.1rem;
+              }
+
+              @include large {
+                font-size: 4.5rem;
+
+                line-height: 4.5rem;
+              }
+            }
           }
+
           img {
             height: 65%;
             top: 27%;
@@ -186,9 +272,21 @@
           .subheader {
             position: relative;
             top: -2%;
-            width: 80%;
+            width: 90%;
             p {
-              font-size: 20px;
+              @include tablet {
+                font-size: 1rem;
+                line-height: 1.4rem;
+              }
+              @include desktop {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+              }
+
+              @include large {
+                font-size: 1.35rem;
+                line-height: 1.81rem;
+              }
             }
           }
         }
@@ -197,12 +295,23 @@
           height: 80vh;
           z-index: 1;
           position: relative;
+          .subheader {
+            p {
+              @include tablet {
+                font-size: 1rem;
+              }
+              @include large {
+                font-size: 1.35rem;
+              }
+            }
+          }
           img {
             top: 22%;
             left: 45%;
           }
           .subheader {
             width: 60%;
+            left: 7%;
           }
         }
         &.fourth {
