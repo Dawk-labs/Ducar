@@ -1,0 +1,17 @@
+@import "../../../utils/mixins.scss";
+&.fourth {
+  img {
+    height: 33vh;
+    transform: scale(2) translateY(2.5em);
+  }
+  @include desktop {
+    img {
+      transform: scale(3) translateX(-1.75em);
+    }
+  }
+  @include large {
+    img {
+      transform: scale(4) translate(-3.4em, 1em);
+    }
+  }
+}

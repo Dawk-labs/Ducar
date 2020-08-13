@@ -1,0 +1,45 @@
+@import "../utils/variables.scss";
+@import "../utils/mixins.scss";
+.slider {
+  position: relative;
+  width: 100%;
+
+  button {
+    cursor: pointer;
+    background-color: rgba(1, 1, 1, 0);
+    border-color: rgba(1, 1, 1, 0);
+    &:focus {
+      border-color: rgba(1, 1, 1, 0);
+    }
+  }
+  .right-arrow {
+    position: absolute;
+    top: 40%;
+    z-index: 3;
+    right: 5%;
+    @include tablet {
+      top: 33%;
+      right: 2%;
+    }
+  }
+  .left-arrow {
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    left: 5%;
+    @include tablet {
+      top: 33%;
+      left: 2%;
+    }
+  }
+  .content-slider {
+    display: flex;
+    width: 400vw;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    @import "../components/slide.scss";
+  }
+
+  @import "../components/slide/slide_indicator.scss";
+}

@@ -1,0 +1,31 @@
+@import "../../../utils/mixins.scss";
+
+&.second {
+  img {
+    height: 25vh;
+  }
+  header {
+    margin-top: 2.7em;
+  }
+  img {
+    position: relative;
+    top: 5em;
+    height: 27vh;
+  }
+  @include tablet {
+    img {
+      height: 18vh;
+      transform: scale(1.9) translate(-2em, -1.5em);
+    }
+  }
+  @include desktop {
+    img {
+      transform: scale(2.7) translate(-2.8em, -1.5em);
+    }
+  }
+  @include large {
+    img {
+      transform: scale(3.7) translate(-2.8em, -1.2em);
+    }
+  }
+}

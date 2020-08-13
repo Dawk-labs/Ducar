@@ -1,0 +1,56 @@
+@import "../../utils/mixins.scss";
+
+.slide {
+  overflow: hidden;
+  position: relative;
+  flex-direction: column-reverse;
+  width: 100vw;
+  height: 90vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $base-font-size;
+
+  img {
+    height: 45vh;
+  }
+  @import "utils/responsive-slide.scss";
+  header {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-family: "Archivo Black", sans-serif;
+      font-size: $base-font-size * 2.75;
+      font-style: normal;
+      font-weight: normal;
+      color: white;
+      letter-spacing: 5.4px;
+      margin: 0.3em 0 0 0.3em;
+    }
+    p {
+      position: relative;
+
+      order: 2;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1em;
+      font-weight: 600;
+      color: white;
+    }
+
+    img {
+      position: relative;
+    }
+    @import "../button.scss";
+    @import "utils/responsive-header.scss";
+    & > * {
+      margin: 1vh;
+    }
+  }
+
+  @import "subcomponents/first-slide.scss";
+  @import "subcomponents/second-slide.scss";
+  @import "subcomponents/third-slide.scss";
+  @import "subcomponents/fourth-slide.scss";
+}

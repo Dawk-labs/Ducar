@@ -1,0 +1,22 @@
+@import "../../../utils/mixins.scss";
+&.third {
+  img {
+    height: 33vh;
+    transform: scale(1.2) translateY(1.8em);
+  }
+  @include tablet {
+    img {
+      height: 23vh;
+    }
+  }
+  @include desktop {
+    img {
+      transform: scale(2.7) translate(-1.6em, 0);
+    }
+  }
+  @include large {
+    img {
+      transform: scale(3.7) translate(-2.5em, 1em);
+    }
+  }
+}

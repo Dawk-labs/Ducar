@@ -1,0 +1,51 @@
+@import "../utils/mixins.scss";
+nav.larger {
+  position: absolute;
+  width: 100%;
+  height: 5vh;
+  z-index: 3;
+  top: 7%;
+
+  .navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    padding-right: 2.3rem;
+    display: none;
+
+    a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: all 1.8s ease-out;
+      color: white;
+      text-decoration: none;
+      margin-left: 2.3rem;
+      &:hover {
+        &:before {
+          display: inline;
+        }
+      }
+      &:before {
+        z-index: 3;
+        content: "";
+        position: absolute;
+        display: none;
+        width: 100%;
+        bottom: -60%;
+        height: 10px;
+        background: linear-gradient(89.6deg, #3426c8 2.76%, #03f0ff 99.96%);
+      }
+    }
+    @include tablet {
+      display: flex;
+    }
+  }
+}

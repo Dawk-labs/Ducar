@@ -1,0 +1,29 @@
+.btn-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a.rounded-button {
+  font-family: "Anton", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: white;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+  text-align: center;
+
+  height: 5vh;
+  width: 40vw;
+  padding-top: 1em;
+  position: relative;
+  bottom: 0;
+  background: linear-gradient(
+    94.8deg,
+    rgba(52, 38, 200, 0.9) 9.26%,
+    rgba(108, 95, 255, 0.9) 77.83%
+  );
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}

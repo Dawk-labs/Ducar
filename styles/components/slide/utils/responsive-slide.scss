@@ -1,0 +1,23 @@
+@import "../../../utils/mixins.scss";
+@import "../../../utils/variables.scss";
+
+@include smallPhone {
+  font-size: $base-font-size * 0.7;
+}
+@include tablet {
+  font-size: $base-font-size * 1.2;
+  flex-direction: row;
+  height: 80vh;
+}
+@include desktop {
+  font-size: $base-font-size * 1.5;
+}
+@include large {
+  font-size: $base-font-size * 1.8;
+}
+@include smallHeight {
+  font-size: $base-font-size * 0.9;
+}
+@include mediumHeight {
+  font-size: $base-font-size * 1;
+}

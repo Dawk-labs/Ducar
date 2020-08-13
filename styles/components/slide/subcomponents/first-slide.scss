@@ -1,0 +1,66 @@
+@import "../../../utils/mixins.scss";
+
+&.first {
+  margin-bottom: 2.6em;
+
+  h1 {
+    order: 1;
+    margin: 0 0 0.5em 0;
+  }
+  p {
+    margin: 0;
+  }
+  .subheader {
+    display: none;
+
+    span {
+      font-family: "Anton", sans-serif;
+      color: white;
+      font-size: 5em;
+    }
+  }
+  .btn-wrapper {
+    order: 3;
+  }
+
+  @include tablet {
+    h1 {
+      order: 2;
+      font-size: $base-font-size * 2;
+    }
+    p {
+      order: 1;
+      left: 0;
+      transform: none;
+    }
+    img {
+      height: 40vh;
+      transform: scale(1.7) translate(-1em, -1em);
+    }
+    .subheader {
+      order: 3;
+      display: flex;
+      width: 40%;
+      p {
+        left: 2em;
+        transform: none;
+        font-size: 0.9em;
+      }
+    }
+    a.rounded-button {
+      left: 0;
+      transform: none;
+    }
+  }
+  @include desktop {
+    img {
+      transform: scale(1.7) translate(-1em, 1em);
+    }
+  }
+
+  @include large {
+    img {
+      transform: scale(1.8) translate(-5em, 0.6em);
+    }
+  }
+}

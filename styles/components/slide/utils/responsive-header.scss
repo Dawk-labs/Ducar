@@ -1,0 +1,28 @@
+@import "../../../utils/mixins.scss";
+
+@include tablet {
+  p:first-child {
+    display: block;
+    font-size: 0.9em;
+  }
+  a.rounded-button {
+    position: relative;
+    left: 0;
+    transform: none;
+    width: 25vw;
+  }
+}
+
+@include smallPhone {
+  margin: 2.5em 0 0 2em;
+}
+
+@include desktop {
+  margin: 2.5em 9em 0 0;
+}
+@include mediumHeight {
+  margin: 2.5em 20em 0 0;
+}
+@include large {
+  margin: 0 20em 0 0;
+}
