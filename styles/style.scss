@@ -1,10 +1,13 @@
+$base-font-size: 1em;
+
 @mixin tablet {
   @media only screen and (min-width: 768px) {
     @content;
   }
 }
-@mixin tabletOnly {
-  @media only screen and (max-width: 768px) {
+
+@mixin smallHeight {
+  @media only screen and (min-height: 677px) {
     @content;
   }
 }
@@ -21,42 +24,63 @@
   }
 }
 
+@mixin smallHeight {
+  @media only screen and (max-height: 572px) {
+    @content;
+  }
+}
+@mixin mediumHeight {
+  @media only screen and (max-height: 650px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin forTabletNorLaptop {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    @content;
+  }
+}
+
 .main {
   width: 100%;
   height: 100vh;
   margin: 0;
   position: fixed;
-  > #backgroundImage {
+  picture > #backgroundImage {
     z-index: 0;
     width: 100%;
     height: 100%;
     position: absolute;
   }
-  nav {
+  nav.larger {
     position: absolute;
     width: 100%;
     height: 5vh;
     z-index: 3;
     top: 7%;
+
     .navbar {
       position: absolute;
-      list-style: none;
       left: 50%;
       transform: translateX(-50%);
+      width: 100vw;
+      display: none;
+      flex-direction: row;
+      justify-content: center;
+      position: relative;
+      padding-right: 2.3rem;
+      display: none;
 
-      ul {
-        display: inline;
+      a {
         font-family: "Montserrat", sans-serif;
-        font-size: 18px;
+        font-size: 1.3rem;
         font-weight: 600;
         text-transform: uppercase;
         position: relative;
         transition: all 1.8s ease-out;
-
-        a {
-          color: white;
-          text-decoration: none;
-        }
+        color: white;
+        text-decoration: none;
+        margin-left: 2.3rem;
         &:hover {
           &:before {
             display: inline;
@@ -67,17 +91,21 @@
           content: "";
           position: absolute;
           display: none;
-          width: 70%;
+          width: 100%;
           bottom: -60%;
           height: 10px;
           background: linear-gradient(89.6deg, #3426c8 2.76%, #03f0ff 99.96%);
         }
+      }
+      @include tablet {
+        display: flex;
       }
     }
   }
   .slider {
     position: relative;
     width: 100%;
+
     button {
       cursor: pointer;
       background-color: rgba(1, 1, 1, 0);
@@ -88,244 +116,276 @@
     }
     .right-arrow {
       position: absolute;
-      top: 50%;
+      top: 40%;
       z-index: 3;
+      right: 5%;
       @include tablet {
-        right: 5%;
-      }
-      @include large {
-        right: 10%;
+        top: 33%;
+        right: 2%;
       }
     }
     .left-arrow {
       position: absolute;
-      top: 50%;
+      top: 40%;
       z-index: 2;
+      left: 5%;
       @include tablet {
-        left: 5%;
-      }
-      @include large {
-        left: 10%;
+        top: 33%;
+        left: 2%;
       }
     }
 
     .content-slider {
       display: flex;
-      width: 400%;
+      width: 400vw;
+      height: 100vh;
       overflow: hidden;
+      align-items: center;
       .slider {
-        width: 100%;
-        height: 80vh;
-        z-index: 1;
+        overflow: hidden;
         position: relative;
+        flex-direction: column-reverse;
+        width: 100vw;
+        height: 90vh;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $base-font-size;
+
+        img {
+          height: 45vh;
+        }
+
+        @include tablet {
+          font-size: $base-font-size * 1.2;
+          flex-direction: row;
+          height: 80vh;
+        }
+        @include desktop {
+          font-size: $base-font-size * 1.5;
+        }
+        @include large {
+          font-size: $base-font-size * 1.8;
+        }
+        @include smallHeight {
+          font-size: $base-font-size * 0.9;
+        }
+        @include mediumHeight {
+          font-size: $base-font-size * 1;
+        }
         header {
-          position: relative;
-          width: 50%;
-          height: 50%;
-          left: 15%;
-          top: 25%;
-          white-space: nowrap;
-          @include tablet {
-            width: 25%;
-            left: 10%;
-          }
-          @include desktop {
-            width: 50%;
-            left: 10%;
-          }
+          display: flex;
+          flex-direction: column;
 
-          @include large {
-            width: 50%;
-            left: 15%;
-          }
-
-          p:first-child {
-            font-family: "Montserrat", sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: white;
-            @include tablet {
-              font-size: 1rem;
-            }
-            @include desktop {
-              font-size: 1.3rem;
-            }
-
-            @include large {
-              font-size: 1.5rem;
-            }
-          }
           h1 {
             font-family: "Archivo Black", sans-serif;
+            font-size: $base-font-size * 2.75;
             font-style: normal;
             font-weight: normal;
-            font-size: 4.5rem;
-
-            line-height: 4.8rem;
             color: white;
             letter-spacing: 5.4px;
-            margin: 0.3em 0;
+            margin: 0.3em 0 0 0.3em;
+          }
+          p {
+            position: relative;
 
-            @include tablet {
-              font-size: 3rem;
-              line-height: 3.3rem;
-            }
-            @include desktop {
-              font-size: 3.5rem;
-              line-height: 3.8rem;
-            }
+            order: 2;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1em;
+            font-weight: 600;
+            color: white;
+          }
 
-            @include large {
-              font-size: 4.5rem;
-              line-height: 4.8rem;
+          img {
+            position: relative;
+          }
+          a.rounded-button {
+            font-family: "Anton", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            color: white;
+            letter-spacing: 0.3em;
+            text-decoration: none;
+            text-align: center;
+            left: 50%;
+
+            transform: translateX(-50%);
+            height: 5vh;
+            width: 40vw;
+            padding-top: 1em;
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(
+              94.8deg,
+              rgba(52, 38, 200, 0.9) 9.26%,
+              rgba(108, 95, 255, 0.9) 77.83%
+            );
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+          }
+          @include tablet {
+            p:first-child {
+              display: block;
+              font-size: 0.9em;
+            }
+            a.rounded-button {
+              position: relative;
+              left: 0;
+              transform: none;
+              width: 25vw;
             }
           }
+
+          @include desktop {
+            margin: 2.5em 9em 0 0;
+          }
+          @include mediumHeight {
+            margin: 2.5em 20em 0 0;
+          }
+          @include large {
+            margin: 0 20em 0 0;
+          }
+          & > * {
+            margin: 1vh;
+          }
+        }
+
+        &.first {
+          margin-bottom: 2.6em;
+
+          h1 {
+            order: 1;
+            margin: 0 0 0.5em 0;
+          }
+          p {
+            position: relative;
+            left: 65%;
+
+            transform: translateX(-50%);
+            order: 2;
+          }
+
           .subheader {
-            display: flex;
-            align-items: center;
+            display: none;
 
             span {
               font-family: "Anton", sans-serif;
               color: white;
-              font-size: 78.4px;
-            }
-            p {
-              font-family: "Montserrat", sans-serif;
-              font-style: normal;
-              font-weight: 600;
-              font-size: 1.35rem;
-              line-height: 1.81rem;
-              /* or 136% */
-              padding-left: 1rem;
-
-              letter-spacing: 1.65px;
-
-              color: #ffffff;
+              font-size: 5em;
             }
           }
-        }
+          a {
+            order: 3;
+          }
 
-        img {
-          z-index: 2;
-          position: absolute;
-          top: 17%;
-          left: 55%;
-          height: 85%;
-        }
-        .rounded-button {
-          position: relative;
-          font-family: "Anton";
-          font-style: normal;
-          font-weight: bold;
-          font-size: 24px;
-          line-height: 50px;
-          color: #ffffff;
-          text-decoration: none;
-          border-radius: 10px;
-          background: rgba(1, 36, 94, 1);
-          letter-spacing: 1.35px;
-          padding: 0.3rem;
-          box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-          border: solid 3px transparent;
-          background-image: linear-gradient(
-              rgba(255, 255, 255, 0),
-              rgba(255, 255, 255, 0)
-            ),
-            linear-gradient(
-              101deg,
-              rgba(197, 136, 240, 1),
-              rgba(255, 255, 255, 0)
-            );
-          background-origin: border-box;
-          background-clip: content-box, border-box;
-          box-shadow: 2px 1000px 1px rgba(2, 32, 85, 1) inset;
-        }
-        &.second {
-          width: 100%;
-          height: 80vh;
-          z-index: 1;
-          position: relative;
-          header {
+          @include tablet {
             h1 {
-              @include tablet {
-                font-size: 1rem;
-                line-height: 1.4rem;
+              order: 2;
+              font-size: $base-font-size * 2;
+            }
+            p {
+              order: 1;
+              left: 0;
+              transform: none;
+            }
+            img {
+              height: 40vh;
+              transform: scale(1.7) translate(-1em, -1em);
+            }
+            .subheader {
+              order: 3;
+              display: flex;
+              width: 40%;
+              p {
+                left: 2em;
+                transform: none;
+                font-size: 0.9em;
               }
-              @include desktop {
-                font-size: 3.2rem;
-                line-height: 3.1rem;
-              }
-
-              @include large {
-                font-size: 4.5rem;
-
-                line-height: 4.5rem;
-              }
+            }
+            a.rounded-button {
+              left: 0;
+              transform: none;
+            }
+          }
+          @include desktop {
+            img {
+              transform: scale(1.7) translate(-1em, 1em);
             }
           }
 
-          img {
-            height: 65%;
-            top: 27%;
-            left: 40%;
+          @include large {
+            img {
+              transform: scale(1.8) translate(-5em, 0.6em);
+            }
           }
-          .subheader {
-            position: relative;
-            top: -2%;
-            width: 90%;
-            p {
-              @include tablet {
-                font-size: 1rem;
-                line-height: 1.4rem;
-              }
-              @include desktop {
-                font-size: 1.2rem;
-                line-height: 1.6rem;
-              }
+        }
 
-              @include large {
-                font-size: 1.35rem;
-                line-height: 1.81rem;
-              }
+        &.second {
+          img {
+            height: 25vh;
+          }
+          header {
+            margin-top: 2.7em;
+          }
+          img {
+            position: relative;
+            top: 5em;
+            height: 27vh;
+          }
+          @include tablet {
+            img {
+              height: 18vh;
+              transform: scale(1.9) translate(-2em, -1.5em);
+            }
+          }
+          @include desktop {
+            img {
+              transform: scale(2.7) translate(-2.8em, -1.5em);
+            }
+          }
+          @include large {
+            img {
+              transform: scale(3.7) translate(-2.8em, -1.2em);
             }
           }
         }
         &.third {
-          width: 100%;
-          height: 80vh;
-          z-index: 1;
-          position: relative;
-          .subheader {
-            p {
-              @include tablet {
-                font-size: 1rem;
-              }
-              @include large {
-                font-size: 1.35rem;
-              }
+          img {
+            height: 33vh;
+            transform: scale(1.2) translateY(1.8em);
+          }
+          @include tablet {
+            img {
+              height: 23vh;
             }
           }
-          img {
-            top: 22%;
-            left: 45%;
+          @include desktop {
+            img {
+              transform: scale(2.7) translate(-1.6em, 0);
+            }
           }
-          .subheader {
-            width: 60%;
-            left: 7%;
+          @include large {
+            img {
+              transform: scale(3.7) translate(-2.5em, 1em);
+            }
           }
         }
+
         &.fourth {
-          width: 100%;
-          height: 80vh;
-          z-index: 1;
-          position: relative;
           img {
-            top: 1%;
-            left: 45%;
-            height: 120%;
+            height: 33vh;
+            transform: scale(2) translateY(2.5em);
           }
-          .subheader {
-            width: 60%;
+          @include desktop {
+            img {
+              transform: scale(3) translateX(-1.75em);
+            }
+          }
+          @include large {
+            img {
+              transform: scale(4) translate(-3.4em, 1em);
+            }
           }
         }
       }

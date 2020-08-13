@@ -15,22 +15,26 @@
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body class="main">
-    <img src="/assets/Fondo.png" alt="Image Background" id="backgroundImage" />
-    <nav>
-      <li class="navbar">
-        <ul>
-          <a href="/">Home</a>
-        </ul>
-        <ul>
-          <a href="">Services</a>
-        </ul>
-        <ul>
-          <a href="/">Products</a>
-        </ul>
-        <ul>
-          <a href="/">Contact</a>
-        </ul>
-      </li>
+    <picture>
+      <source srcset="/assets/Background.png" media="(max-width: 768px)" />
+
+      <img
+        src="/assets/Fondo.png"
+        alt="Image Background"
+        id="backgroundImage"
+      />
+    </picture>
+
+    <nav class="larger">
+      <div class="navbar">
+        <a href="/">Home</a>
+
+        <a href="">Services</a>
+
+        <a href="/">Products</a>
+
+        <a href="/">Contact</a>
+      </div>
     </nav>
     <div class="slider">
       <button class="left-arrow" id="left">
