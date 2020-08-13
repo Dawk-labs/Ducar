@@ -11,6 +11,11 @@ $base-font-size: 1em;
     @content;
   }
 }
+@mixin smallPhone {
+  @media only screen and (max-height: 650px) and (max-width: 400px) {
+    @content;
+  }
+}
 
 @mixin desktop {
   @media only screen and (min-width: 992px) {
@@ -25,7 +30,7 @@ $base-font-size: 1em;
 }
 
 @mixin smallHeight {
-  @media only screen and (max-height: 572px) {
+  @media only screen and (max-height: 572px) and (min-width: 768px) {
     @content;
   }
 }
@@ -156,7 +161,9 @@ $base-font-size: 1em;
         img {
           height: 45vh;
         }
-
+        @include smallPhone {
+          font-size: $base-font-size * 0.7;
+        }
         @include tablet {
           font-size: $base-font-size * 1.2;
           flex-direction: row;
@@ -200,6 +207,13 @@ $base-font-size: 1em;
           img {
             position: relative;
           }
+          .btn-wrapper {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
           a.rounded-button {
             font-family: "Anton", sans-serif;
             font-style: normal;
@@ -208,13 +222,11 @@ $base-font-size: 1em;
             letter-spacing: 0.3em;
             text-decoration: none;
             text-align: center;
-            left: 50%;
 
-            transform: translateX(-50%);
             height: 5vh;
             width: 40vw;
             padding-top: 1em;
-            position: absolute;
+            position: relative;
             bottom: 0;
             background: linear-gradient(
               94.8deg,
@@ -235,6 +247,10 @@ $base-font-size: 1em;
               transform: none;
               width: 25vw;
             }
+          }
+
+          @include smallPhone {
+            margin: 2.5em 0 0 2em;
           }
 
           @include desktop {
@@ -259,13 +275,8 @@ $base-font-size: 1em;
             margin: 0 0 0.5em 0;
           }
           p {
-            position: relative;
-            left: 65%;
-
-            transform: translateX(-50%);
-            order: 2;
+            margin: 0;
           }
-
           .subheader {
             display: none;
 
@@ -275,7 +286,7 @@ $base-font-size: 1em;
               font-size: 5em;
             }
           }
-          a {
+          .btn-wrapper {
             order: 3;
           }
 
@@ -409,3 +420,4 @@ $base-font-size: 1em;
   }
 }
 // rgba(1, 47, 109, 1) rgba(1, 47, 109, 1)
+//cuando la pantalla es de 768 y la altura menor a 768

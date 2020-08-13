@@ -156,6 +156,12 @@
   height: 45vh;
 }
 
+@media only screen and (max-height: 650px) and (max-width: 400px) {
+  .main .slider .content-slider .slider {
+    font-size: 0.7em;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .main .slider .content-slider .slider {
     font-size: 1.2em;
@@ -179,7 +185,7 @@
   }
 }
 
-@media only screen and (max-height: 572px) {
+@media only screen and (max-height: 572px) and (min-width: 768px) {
   .main .slider .content-slider .slider {
     font-size: 0.9em;
   }
@@ -226,6 +232,20 @@
   position: relative;
 }
 
+.main .slider .content-slider .slider header .btn-wrapper {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .main .slider .content-slider .slider header a.rounded-button {
   font-family: "Anton", sans-serif;
   font-style: normal;
@@ -234,13 +254,10 @@
   letter-spacing: 0.3em;
   text-decoration: none;
   text-align: center;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   height: 5vh;
   width: 40vw;
   padding-top: 1em;
-  position: absolute;
+  position: relative;
   bottom: 0;
   background: linear-gradient(94.8deg, rgba(52, 38, 200, 0.9) 9.26%, rgba(108, 95, 255, 0.9) 77.83%);
   -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
@@ -259,6 +276,12 @@
     -webkit-transform: none;
             transform: none;
     width: 25vw;
+  }
+}
+
+@media only screen and (max-height: 650px) and (max-width: 400px) {
+  .main .slider .content-slider .slider header {
+    margin: 2.5em 0 0 2em;
   }
 }
 
@@ -296,13 +319,7 @@
 }
 
 .main .slider .content-slider .slider.first p {
-  position: relative;
-  left: 65%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  margin: 0;
 }
 
 .main .slider .content-slider .slider.first .subheader {
@@ -315,7 +332,7 @@
   font-size: 5em;
 }
 
-.main .slider .content-slider .slider.first a {
+.main .slider .content-slider .slider.first .btn-wrapper {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
