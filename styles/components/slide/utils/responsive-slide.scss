@@ -15,6 +15,7 @@
 @include large {
   font-size: $base-font-size * 1.8;
 }
+
 @include smallHeight {
   font-size: $base-font-size * 0.9;
 }

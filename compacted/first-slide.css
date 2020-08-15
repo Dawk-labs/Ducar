@@ -1,0 +1,74 @@
+.slide.first {
+  margin-bottom: 2.6em; }
+  .slide.first h1 {
+    order: 1;
+    margin: 0 0 0.5em 0; }
+  .slide.first p {
+    margin: 0; }
+  .slide.first .subheader {
+    display: none; }
+    .slide.first .subheader span {
+      font-family: "Anton", sans-serif;
+      color: white; }
+  .slide.first .btn-wrapper {
+    order: 3; }
+  @media only screen and (min-width: 768px) {
+    .slide.first h1 {
+      order: 2;
+      font-size: 2.3em; }
+    .slide.first p {
+      order: 1;
+      left: 0;
+      transform: none; }
+    .slide.first img {
+      height: 40vh;
+      transform: scale(1.7) translate(-1em, -1em); }
+    .slide.first .subheader {
+      order: 3;
+      display: flex;
+      width: 40%;
+      align-items: center;
+      justify-content: start; }
+      .slide.first .subheader p {
+        transform: none;
+        font-size: 0.9em; }
+    .slide.first a.rounded-button {
+      left: 0;
+      transform: none; } }
+  @media only screen and (min-width: 992px) {
+    .slide.first img {
+      transform: scale(1.7) translate(-1em, 1em); } }
+  @media only screen and (min-width: 1200px) {
+    .slide.first img {
+      transform: scale(1.8) translate(-2.5em, 0.6em); }
+    .slide.first header {
+      margin: 6em 20% 0 0; }
+      .slide.first header::after {
+        position: absolute;
+        right: 10%;
+        top: 41%;
+        content: "";
+        width: 10%;
+        height: 25%;
+        background: linear-gradient(129.25deg, #0c4da4 16.95%, #012f6d 72.48%); }
+    .slide.first h1 {
+      margin-left: -0.7em;
+      margin-bottom: 0.3em;
+      position: relative; }
+      .slide.first h1::before {
+        position: absolute;
+        z-index: -1;
+        margin-left: 0.7em;
+        content: "";
+        width: 100%;
+        height: 110%;
+        background: linear-gradient(91.58deg, #0c4da4 5.9%, #012f6d 89.15%); }
+    .slide.first p {
+      position: relative;
+      bottom: 1em; }
+    .slide.first .subheader span {
+      font-size: 2.3em; }
+    .slide.first .subheader p {
+      font-size: 0.6em;
+      margin-left: 0.6em;
+      bottom: 0; } }

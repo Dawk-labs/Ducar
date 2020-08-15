@@ -1,0 +1,29 @@
+.slide.second img {
+  height: 25vh; }
+
+.slide.second header {
+  margin-top: 2.7em; }
+
+.slide.second img {
+  position: relative;
+  top: 5em;
+  height: 27vh; }
+
+@media only screen and (min-width: 768px) {
+  .slide.second img {
+    height: 18vh;
+    transform: scale(1.9) translate(-2em, -1.5em); } }
+
+@media only screen and (min-width: 992px) {
+  .slide.second img {
+    transform: scale(2.7) translate(-2.8em, -1.5em); } }
+
+@media only screen and (min-width: 1200px) {
+  .slide.second header {
+    margin: 6em 20% 0 0; }
+  .slide.second h1 {
+    font-size: 2.1em;
+    margin-bottom: 0.3em;
+    position: relative; }
+  .slide.second img {
+    transform: scale(3.7) translate(-2.8em, -1.2em); } }

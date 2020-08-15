@@ -1,5 +1,5 @@
 @import "../../../utils/mixins.scss";
-&.third {
+.slide.third {
   img {
     height: 33vh;
     transform: scale(1.2) translateY(1.8em);
@@ -10,13 +10,79 @@
     }
   }
   @include desktop {
+    header {
+      margin: 3.3em 18% 0 0;
+      &::after {
+        position: absolute;
+        right: 10%;
+        top: 41%;
+        content: "";
+        width: 10%;
+        height: 25%;
+        background: linear-gradient(129.25deg, #0c4da4 16.95%, #012f6d 72.48%);
+      }
+      h1 {
+        font-size: 2.6em;
+        margin-left: -0.7em;
+        position: relative;
+        &::before {
+          position: absolute;
+          z-index: -1;
+          margin-left: 0.7em;
+          content: "";
+          width: 100%;
+          top: 20%;
+          height: 75%;
+          background: linear-gradient(91.58deg, #0c4da4 5.9%, #012f6d 89.15%);
+        }
+      }
+      .subheader {
+        p {
+          margin: 0;
+          font-size: 0.9em;
+        }
+      }
+    }
     img {
-      transform: scale(2.7) translate(-1.6em, 0);
+      transform: scale(3.1) translate(-2.6em, 0.3em);
     }
   }
   @include large {
+    header {
+      margin: 3em 18% 0 0;
+      &::after {
+        position: absolute;
+        right: 10%;
+        top: 41%;
+        content: "";
+        width: 10%;
+        height: 25%;
+        background: linear-gradient(129.25deg, #0c4da4 16.95%, #012f6d 72.48%);
+      }
+      h1 {
+        font-size: 2em;
+        margin-left: -0.7em;
+        position: relative;
+        &::before {
+          position: absolute;
+          z-index: -1;
+          margin-left: 0.7em;
+          content: "";
+          width: 100%;
+          top: 20%;
+          height: 75%;
+          background: linear-gradient(91.58deg, #0c4da4 5.9%, #012f6d 89.15%);
+        }
+      }
+      .subheader {
+        p {
+          margin: 0;
+          font-size: 0.6em;
+        }
+      }
+    }
     img {
-      transform: scale(3.7) translate(-2.5em, 1em);
+      transform: scale(3.1) translate(-1.7em, 0.1em);
     }
   }
 }

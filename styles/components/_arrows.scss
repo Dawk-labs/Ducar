@@ -1,0 +1,29 @@
+button {
+  cursor: pointer;
+  background-color: rgba(1, 1, 1, 0);
+  border-color: rgba(1, 1, 1, 0);
+  &:focus {
+    border-color: rgba(1, 1, 1, 0);
+  }
+}
+.right-arrow {
+  position: absolute;
+  top: 40%;
+  z-index: 3;
+  right: 5%;
+  @include tablet {
+    right: 6%;
+
+    top: 41%;
+  }
+}
+.left-arrow {
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+  left: 5%;
+  @include tablet {
+    left: 6%;
+    top: 41%;
+  }
+}

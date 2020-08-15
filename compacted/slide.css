@@ -1,0 +1,233 @@
+.slide {
+  overflow: hidden;
+  position: relative;
+  flex-direction: column-reverse;
+  width: 100vw;
+  height: 90vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em; }
+  .slide img {
+    height: 45vh; }
+  @media only screen and (max-height: 650px) and (max-width: 400px) {
+    .slide {
+      font-size: 0.7em; } }
+  @media only screen and (min-width: 768px) {
+    .slide {
+      font-size: 1.2em;
+      flex-direction: row;
+      height: 80vh; } }
+  @media only screen and (min-width: 992px) {
+    .slide {
+      font-size: 1.5em; } }
+  @media only screen and (min-width: 1200px) {
+    .slide {
+      font-size: 1.8em; } }
+  @media only screen and (max-height: 572px) and (min-width: 768px) {
+    .slide {
+      font-size: 0.9em; } }
+  @media only screen and (max-height: 650px) and (min-width: 768px) {
+    .slide {
+      font-size: 1em; } }
+  .slide header {
+    display: flex;
+    flex-direction: column; }
+    .slide header h1 {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 2.75em;
+      font-style: normal;
+      font-weight: normal;
+      color: white;
+      letter-spacing: 5.4px;
+      margin: 0.3em 0 0 0.3em; }
+    .slide header p {
+      position: relative;
+      order: 2;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.6em;
+      font-weight: 600;
+      color: white; }
+    .slide header img {
+      position: relative; }
+    .slide header .subheader span {
+      font-size: 2.3em; }
+    .slide header .btn-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .slide header a.rounded-button {
+      font-family: "Anton", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      color: white;
+      letter-spacing: 0.3em;
+      text-decoration: none;
+      text-align: center;
+      height: 5vh;
+      width: 40vw;
+      padding-top: 1em;
+      position: relative;
+      bottom: 0;
+      background: linear-gradient(94.8deg, rgba(52, 38, 200, 0.9) 9.26%, rgba(108, 95, 255, 0.9) 77.83%);
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+      border-radius: 10px; }
+    @media only screen and (min-width: 768px) {
+      .slide header p:first-child {
+        display: block;
+        font-size: 0.9em; }
+      .slide header a.rounded-button {
+        position: relative;
+        left: 0;
+        transform: none;
+        width: 25vw; } }
+    @media only screen and (max-height: 650px) and (max-width: 400px) {
+      .slide header {
+        margin: 2.5em 0 0 2em; } }
+    @media only screen and (min-width: 992px) {
+      .slide header {
+        margin: 2.5em 9em 0 0; } }
+    @media only screen and (max-height: 650px) and (min-width: 768px) {
+      .slide header {
+        margin: 2.5em 20em 0 0; } }
+    @media only screen and (min-width: 1200px) {
+      .slide header {
+        margin: 6em 17em 0 0; } }
+    .slide header > * {
+      margin: 1vh; }
+
+.slide.first {
+  margin-bottom: 2.6em; }
+  .slide.first h1 {
+    order: 1;
+    margin: 0 0 0.5em 0; }
+  .slide.first p {
+    margin: 0; }
+  .slide.first .subheader {
+    display: none; }
+    .slide.first .subheader span {
+      font-family: "Anton", sans-serif;
+      color: white; }
+  .slide.first .btn-wrapper {
+    order: 3; }
+  @media only screen and (min-width: 768px) {
+    .slide.first h1 {
+      order: 2;
+      font-size: 2.3em; }
+    .slide.first p {
+      order: 1;
+      left: 0;
+      transform: none; }
+    .slide.first img {
+      height: 40vh;
+      transform: scale(1.7) translate(-1em, -1em); }
+    .slide.first .subheader {
+      order: 3;
+      display: flex;
+      width: 40%;
+      align-items: center;
+      justify-content: start; }
+      .slide.first .subheader p {
+        transform: none;
+        font-size: 0.9em; }
+    .slide.first a.rounded-button {
+      left: 0;
+      transform: none; } }
+  @media only screen and (min-width: 992px) {
+    .slide.first img {
+      transform: scale(1.7) translate(-1em, 1em); } }
+  @media only screen and (min-width: 1200px) {
+    .slide.first img {
+      transform: scale(1.8) translate(-2.5em, 0.6em); }
+    .slide.first header {
+      margin: 6em 20% 0 0; }
+      .slide.first header::after {
+        position: absolute;
+        right: 10%;
+        top: 41%;
+        content: "";
+        width: 10%;
+        height: 25%;
+        background: linear-gradient(129.25deg, #0c4da4 16.95%, #012f6d 72.48%); }
+    .slide.first h1 {
+      margin-left: -0.7em;
+      margin-bottom: 0.3em;
+      position: relative; }
+      .slide.first h1::before {
+        position: absolute;
+        z-index: -1;
+        margin-left: 0.7em;
+        content: "";
+        width: 100%;
+        height: 110%;
+        background: linear-gradient(91.58deg, #0c4da4 5.9%, #012f6d 89.15%); }
+    .slide.first p {
+      position: relative;
+      bottom: 1em; }
+    .slide.first .subheader span {
+      font-size: 2.3em; }
+    .slide.first .subheader p {
+      font-size: 0.6em;
+      margin-left: 0.6em;
+      bottom: 0; } }
+
+.slide.second img {
+  height: 25vh; }
+
+.slide.second header {
+  margin-top: 2.7em; }
+
+.slide.second img {
+  position: relative;
+  top: 5em;
+  height: 27vh; }
+
+@media only screen and (min-width: 768px) {
+  .slide.second img {
+    height: 18vh;
+    transform: scale(1.9) translate(-2em, -1.5em); } }
+
+@media only screen and (min-width: 992px) {
+  .slide.second img {
+    transform: scale(2.7) translate(-2.8em, -1.5em); } }
+
+@media only screen and (min-width: 1200px) {
+  .slide.second header {
+    margin: 6em 20% 0 0; }
+  .slide.second h1 {
+    font-size: 2.1em;
+    margin-bottom: 0.3em;
+    position: relative; }
+  .slide.second img {
+    transform: scale(3.7) translate(-2.8em, -1.2em); } }
+
+.slide.third img {
+  height: 33vh;
+  transform: scale(1.2) translateY(1.8em); }
+
+@media only screen and (min-width: 768px) {
+  .slide.third img {
+    height: 23vh; } }
+
+@media only screen and (min-width: 992px) {
+  .slide.third img {
+    transform: scale(2.7) translate(-1.6em, 0); } }
+
+@media only screen and (min-width: 1200px) {
+  .slide.third img {
+    transform: scale(3.7) translate(-2.5em, 1em); } }
+
+.slide.fourth img {
+  height: 33vh;
+  transform: scale(2) translateY(2.5em); }
+
+@media only screen and (min-width: 992px) {
+  .slide.fourth img {
+    transform: scale(3) translateX(-1.75em); } }
+
+@media only screen and (min-width: 1200px) {
+  .slide.fourth img {
+    transform: scale(4) translate(-3.4em, 1em); } }

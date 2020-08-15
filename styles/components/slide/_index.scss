@@ -1,4 +1,5 @@
 @import "../../utils/mixins.scss";
+@import "../../utils/variables.scss";
 
 .slide {
   overflow: hidden;
@@ -34,7 +35,7 @@
 
       order: 2;
       font-family: "Montserrat", sans-serif;
-      font-size: 1em;
+      font-size: 0.6em;
       font-weight: 600;
       color: white;
     }
@@ -42,15 +43,19 @@
     img {
       position: relative;
     }
+    .subheader {
+      span {
+        font-size: 2.3em;
+      }
+    }
     @import "../button.scss";
     @import "utils/responsive-header.scss";
     & > * {
       margin: 1vh;
     }
   }
-
-  @import "subcomponents/first-slide.scss";
-  @import "subcomponents/second-slide.scss";
-  @import "subcomponents/third-slide.scss";
-  @import "subcomponents/fourth-slide.scss";
 }
+@import "subcomponents/first-slide.scss";
+@import "subcomponents/second-slide.scss";
+@import "subcomponents/third-slide.scss";
+@import "subcomponents/fourth-slide.scss";

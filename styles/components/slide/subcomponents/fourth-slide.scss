@@ -1,5 +1,5 @@
 @import "../../../utils/mixins.scss";
-&.fourth {
+.slide.fourth {
   img {
     height: 33vh;
     transform: scale(2) translateY(2.5em);
@@ -10,8 +10,41 @@
     }
   }
   @include large {
+    header {
+      margin: 3.5em 28% 0 0;
+      &::after {
+        position: absolute;
+        right: 10%;
+        top: 41%;
+        content: "";
+        width: 10%;
+        height: 25%;
+        background: linear-gradient(129.25deg, #0c4da4 16.95%, #012f6d 72.48%);
+      }
+      h1 {
+        font-size: 2em;
+        position: relative;
+        margin-left: -0.7em;
+        &::before {
+          position: absolute;
+          z-index: -1;
+          margin-left: 0.7em;
+          content: "";
+          width: 100%;
+          top: 20%;
+          height: 75%;
+          background: linear-gradient(91.58deg, #0c4da4 5.9%, #012f6d 89.15%);
+        }
+      }
+      .subheader {
+        p {
+          font-size: 0.6em;
+          margin: 0;
+        }
+      }
+    }
     img {
-      transform: scale(4) translate(-3.4em, 1em);
+      transform: scale(4) translate(-1.6em, 0.5em);
     }
   }
 }
