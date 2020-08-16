@@ -10,11 +10,11 @@
   height: 80vh;
 }
 @include desktop {
-  font-size: $base-font-size * 1.3;
+  font-size: $base-font-size * 1;
 }
 
 @include desktopHeigher {
-  font-size: $base-font-size * 1;
+  font-size: $base-font-size * 1.6;
 }
 
 @include large {

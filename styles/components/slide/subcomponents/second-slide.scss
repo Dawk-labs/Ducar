@@ -15,7 +15,92 @@
   @include tablet {
     img {
       height: 18vh;
-      transform: scale(1.9) translate(-2em, -1.5em);
+      transform: scale(1.9) translate(-2em, -3.3em);
+    }
+    header {
+      margin-left: 4em;
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 31%;
+        content: "";
+        width: 10%;
+        height: 25%;
+        background: linear-gradient(129.25deg, #0c4da4 16.95%, #012f6d 72.48%);
+      }
+      h1 {
+        position: relative;
+        margin-left: -0.7em;
+        &::before {
+          position: absolute;
+          z-index: -1;
+          top: 1em;
+          margin-left: 0.7em;
+          content: "";
+          width: 50%;
+
+          height: 60%;
+          background: linear-gradient(91.58deg, #0c4da4 5.9%, #012f6d 89.15%);
+        }
+      }
+      .btn-wrapper {
+        justify-content: flex-start;
+      }
+    }
+  }
+  @include desktopHeigher {
+    img {
+      height: 18vh;
+      transform: scale(1.9) translate(-2em, -3em);
+    }
+    header {
+      width: 100%;
+      /* padding-left: 2vh; */
+      margin-top: 6em;
+      margin-left: 10vh;
+      h1 {
+        position: relative;
+        margin-left: -0.7em;
+        font-size: 2.7em;
+        &::before {
+          position: absolute;
+          z-index: -1;
+          margin-left: 0.7em;
+          content: "";
+          width: 100%;
+
+          height: 110%;
+          background: linear-gradient(91.58deg, #0c4da4 5.9%, #012f6d 89.15%);
+        }
+        &::after {
+          position: absolute;
+          right: -70%;
+          content: "";
+          top: 15%;
+          width: 20%;
+          height: 35%;
+          background: linear-gradient(
+            129.25deg,
+            #0c4da4 16.95%,
+            #012f6d 72.48%
+          );
+        }
+      }
+      .btn-wrapper {
+        justify-content: flex-start;
+      }
+
+      .subheader {
+        display: flex;
+        width: 60%;
+        align-items: center;
+        justify-content: start;
+        p {
+          transform: none;
+          font-size: 0.9em;
+          margin-left: 0.3em;
+        }
+      }
     }
   }
   @include desktop {
@@ -90,7 +175,7 @@
       }
     }
     img {
-      transform: scale(3.7) translate(-1.2em, -1.2em);
+      transform: scale(3.1) translate(-1.2em, -1.2em);
     }
   }
 }
