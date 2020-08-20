@@ -14,7 +14,6 @@ const values = [
     left: "-300%",
   },
 ];
-
 const leftArrow = document.getElementById("left");
 const rightArrow = document.getElementById("right");
 
@@ -56,4 +55,13 @@ const indicators = document.getElementById("indicators").children;
 
 window.addEventListener("load", () => {
   indicators[index].style.backgroundColor = "white";
+});
+
+[...indicators].forEach((e, indx) => {
+  indicators[indx].onclick = () => {
+    indicators[index].style.backgroundColor = "rgba(1,1,1,0)";
+    index = indx;
+    e.style.backgroundColor = "white";
+    container.style.marginLeft = values[indx].left;
+  };
 });
