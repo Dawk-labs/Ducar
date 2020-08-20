@@ -9,6 +9,7 @@ button {
 .right-arrow {
   position: absolute;
   top: 40%;
+  z-index: 3;
   right: 5%;
   @include tablet {
     right: 6%;
