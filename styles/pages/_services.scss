@@ -1,0 +1,72 @@
+.services {
+  margin: 0;
+  @import "../components/_navbar-large";
+  @import "../components/_navbar-mobile";
+  background-image: url("/assets/servicios.png");
+  background-color: rgba(13, 0, 72, 1);
+  background-size: 100% 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @import "../components/slide/utils/responsive-slide.scss";
+  color: white;
+
+  .content {
+    position: relative;
+    top: 18vh;
+    section {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+
+      color: white;
+      text-align: center;
+      h3 {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 1.25em;
+      }
+      p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 1em;
+      }
+    }
+    .ex-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      .img {
+        background-color: #fff;
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
+      }
+      p {
+        text-align: center;
+
+        font-family: "Archivo Black", sans-serif;
+
+        width: 7em;
+      }
+    }
+    .info {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      p {
+        width: 50%;
+        text-align: center;
+      }
+      .right,
+      .left {
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+}
