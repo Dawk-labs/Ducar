@@ -16,7 +16,9 @@ const values = [
 ];
 const leftArrow = document.getElementById("left");
 const rightArrow = document.getElementById("right");
-
+const navBarM = document.getElementById("nav-m");
+const closeNavM = document.getElementById("closeNav");
+const openNavM = document.getElementById("openNav");
 leftArrow.onclick = () => {
   if (index > 0) {
     index = index - 1;
@@ -65,3 +67,11 @@ window.addEventListener("load", () => {
     container.style.marginLeft = values[indx].left;
   };
 });
+
+openNavM.onclick = () => {
+  navBarM.style.left = "0";
+};
+
+closeNavM.onclick = () => {
+  navBarM.style.left = "100%";
+};
