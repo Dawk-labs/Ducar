@@ -1,0 +1,33 @@
+@media only screen and (max-height: 650px) and (max-width: 400px) {
+  font-size: 0.7em;
+}
+
+@media only screen and (min-width: 768px) {
+  font-size: 1.2em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 80vh;
+}
+
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+  font-size: 1em;
+}
+
+@media only screen and (min-width: 992px) and (orientation: portrait) {
+  font-size: 1.6em;
+}
+
+@media only screen and (min-width: 1200px) {
+  font-size: 1.8em;
+}
+
+@media only screen and (max-height: 650px) and (min-width: 768px) {
+  font-size: 0.9em;
+}
+
+@media only screen and (max-height: 700px) and (min-width: 768px) {
+  font-size: 1em;
+}
+/*# sourceMappingURL=responsive-slide.css.map */

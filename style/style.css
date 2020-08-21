@@ -66,7 +66,6 @@
       border-color: rgba(0, 0, 0, 0); }
     .main nav.mobile + .links {
       left: 100%;
-      top: 0;
       z-index: 5;
       position: fixed;
       display: flex;
@@ -261,7 +260,6 @@
       border-color: rgba(0, 0, 0, 0); }
     .services nav.mobile + .links {
       left: 100%;
-      top: 0;
       z-index: 5;
       position: fixed;
       display: flex;
@@ -320,11 +318,7 @@
       font-size: 1em; } }
   .services .content {
     position: relative;
-    top: 10vh;
-    width: 100%; }
-    @media only screen and (min-width: 768px) {
-      .services .content {
-        top: 18vh; } }
+    top: 18vh; }
     .services .content section {
       position: relative;
       left: 50%;
@@ -339,107 +333,63 @@
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         font-size: 1em; }
-    .services .content .steps {
+    .services .content .ex-container {
       display: flex;
-      position: relative;
       align-items: center;
       justify-content: space-evenly;
-      max-width: 100%;
-      padding: 0 5em 0 5em;
-      flex-direction: column; }
-      .services .content .steps hr {
-        position: relative;
-        flex-grow: 1;
-        bottom: 2em;
-        display: none; }
-      @media only screen and (min-width: 768px) {
-        .services .content .steps {
-          flex-direction: row; }
-          .services .content .steps hr {
-            display: block; } }
-      .services .content .steps .step {
+      width: 100%; }
+      .services .content .ex-container .img {
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0);
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
         display: flex;
-        align-items: center;
         justify-content: center;
-        flex-direction: column;
-        position: relative; }
-        .services .content .steps .step .img {
-          width: 8em;
-          height: 8em; }
-        .services .content .steps .step p {
-          text-align: center;
-          font-family: "Archivo Black", sans-serif;
-          margin: 1em 0 1em 0;
-          width: 7em; }
-      @media only screen and (min-width: 768px) {
-        .services .content .steps .step::after {
-          display: none; }
-        .services .content .steps .step::before {
-          display: none; } }
-      .services .content .steps .step.one:before {
-        position: absolute;
-        content: "";
-        width: 5px;
-        height: 1em;
-        top: 8em;
-        background-color: #fff; }
-      .services .content .steps .step.two:before {
-        content: "";
-        width: 5px;
-        height: 1em;
-        bottom: 0em;
-        background-color: #fff; }
-      .services .content .steps .step.two:after {
-        position: absolute;
-        content: "";
-        width: 5px;
-        height: 1em;
-        top: 9em;
-        background-color: #fff; }
-      .services .content .steps .step.three:before {
-        content: "";
-        width: 5px;
-        height: 1em;
-        bottom: 0em;
-        background-color: #fff; }
-    .services .content .info {
-      display: flex;
-      position: relative;
-      flex-direction: column;
-      max-width: 100%;
-      top: 4em; }
-      .services .content .info div {
-        display: flex;
-        padding: 2em;
-        flex-direction: column;
         align-items: center; }
-        .services .content .info div .text {
-          order: 2;
-          display: flex;
-          flex-direction: column;
-          max-width: 80%;
-          text-align: center; }
-          .services .content .info div .text h3 {
-            font-family: "Archivo Black", sans-serif;
-            font-size: 1.75em; }
-          .services .content .info div .text p {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 600;
-            font-size: 1.25em; }
-        .services .content .info div img {
-          order: 1;
-          width: 80%;
-          height: auto; }
-        @media only screen and (min-width: 768px) {
-          .services .content .info div {
-            flex-direction: row; }
-            .services .content .info div img {
-              order: 2;
-              width: 50%; }
-            .services .content .info div .text {
-              order: 1;
-              max-width: 50%;
-              text-align: left; } }
+        .services .content .ex-container .img h3 {
+          display: block;
+          font-family: "Archivo Black", sans-serif; }
+      .services .content .ex-container p {
+        text-align: center;
+        font-family: "Archivo Black", sans-serif;
+        width: 7em; }
+    .services .content .info {
+      margin: 7em 0 7em 0;
+      height: 70vh;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      flex-direction: column; }
+      @media only screen and (min-width: 768px) {
+        .services .content .info {
+          flex-direction: row; } }
+      .services .content .info .right,
+      .services .content .info .left {
+        max-width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column; }
+        .services .content .info .right h3,
+        .services .content .info .left h3 {
+          font-family: "Archivo Black", sans-serif;
+          font-size: 2em;
+          max-width: 50%;
+          margin: 0; }
+        .services .content .info .right p,
+        .services .content .info .left p {
+          width: 50%;
+          font-family: "Montserrat", sans-serif; }
+      .services .content .info .left {
+        align-self: flex-start; }
+      .services .content .info .right {
+        align-self: flex-end; }
+        .services .content .info .right h3 {
+          max-width: 70%; }
+        .services .content .info .right P {
+          max-width: 70%; }
 
 .services {
   margin: 0;
@@ -509,7 +459,6 @@
       border-color: rgba(0, 0, 0, 0); }
     .services nav.mobile + .links {
       left: 100%;
-      top: 0;
       z-index: 5;
       position: fixed;
       display: flex;
@@ -568,11 +517,7 @@
       font-size: 1em; } }
   .services .content {
     position: relative;
-    top: 10vh;
-    width: 100%; }
-    @media only screen and (min-width: 768px) {
-      .services .content {
-        top: 18vh; } }
+    top: 18vh; }
     .services .content section {
       position: relative;
       left: 50%;
@@ -587,104 +532,60 @@
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         font-size: 1em; }
-    .services .content .steps {
+    .services .content .ex-container {
       display: flex;
-      position: relative;
       align-items: center;
       justify-content: space-evenly;
-      max-width: 100%;
-      padding: 0 5em 0 5em;
-      flex-direction: column; }
-      .services .content .steps hr {
-        position: relative;
-        flex-grow: 1;
-        bottom: 2em;
-        display: none; }
-      @media only screen and (min-width: 768px) {
-        .services .content .steps {
-          flex-direction: row; }
-          .services .content .steps hr {
-            display: block; } }
-      .services .content .steps .step {
+      width: 100%; }
+      .services .content .ex-container .img {
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0);
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
         display: flex;
-        align-items: center;
         justify-content: center;
-        flex-direction: column;
-        position: relative; }
-        .services .content .steps .step .img {
-          width: 8em;
-          height: 8em; }
-        .services .content .steps .step p {
-          text-align: center;
-          font-family: "Archivo Black", sans-serif;
-          margin: 1em 0 1em 0;
-          width: 7em; }
-      @media only screen and (min-width: 768px) {
-        .services .content .steps .step::after {
-          display: none; }
-        .services .content .steps .step::before {
-          display: none; } }
-      .services .content .steps .step.one:before {
-        position: absolute;
-        content: "";
-        width: 5px;
-        height: 1em;
-        top: 8em;
-        background-color: #fff; }
-      .services .content .steps .step.two:before {
-        content: "";
-        width: 5px;
-        height: 1em;
-        bottom: 0em;
-        background-color: #fff; }
-      .services .content .steps .step.two:after {
-        position: absolute;
-        content: "";
-        width: 5px;
-        height: 1em;
-        top: 9em;
-        background-color: #fff; }
-      .services .content .steps .step.three:before {
-        content: "";
-        width: 5px;
-        height: 1em;
-        bottom: 0em;
-        background-color: #fff; }
-    .services .content .info {
-      display: flex;
-      position: relative;
-      flex-direction: column;
-      max-width: 100%;
-      top: 4em; }
-      .services .content .info div {
-        display: flex;
-        padding: 2em;
-        flex-direction: column;
         align-items: center; }
-        .services .content .info div .text {
-          order: 2;
-          display: flex;
-          flex-direction: column;
-          max-width: 80%;
-          text-align: center; }
-          .services .content .info div .text h3 {
-            font-family: "Archivo Black", sans-serif;
-            font-size: 1.75em; }
-          .services .content .info div .text p {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 600;
-            font-size: 1.25em; }
-        .services .content .info div img {
-          order: 1;
-          width: 80%;
-          height: auto; }
-        @media only screen and (min-width: 768px) {
-          .services .content .info div {
-            flex-direction: row; }
-            .services .content .info div img {
-              order: 2;
-              width: 50%; }
-            .services .content .info div .text {
-              order: 1;
-              max-width: 50%;
-              text-align: left; } }
+        .services .content .ex-container .img h3 {
+          display: block;
+          font-family: "Archivo Black", sans-serif; }
+      .services .content .ex-container p {
+        text-align: center;
+        font-family: "Archivo Black", sans-serif;
+        width: 7em; }
+    .services .content .info {
+      margin: 7em 0 7em 0;
+      height: 70vh;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      flex-direction: column; }
+      @media only screen and (min-width: 768px) {
+        .services .content .info {
+          flex-direction: row; } }
+      .services .content .info .right,
+      .services .content .info .left {
+        max-width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column; }
+        .services .content .info .right h3,
+        .services .content .info .left h3 {
+          font-family: "Archivo Black", sans-serif;
+          font-size: 2em;
+          max-width: 50%;
+          margin: 0; }
+        .services .content .info .right p,
+        .services .content .info .left p {
+          width: 50%;
+          font-family: "Montserrat", sans-serif; }
+      .services .content .info .left {
+        align-self: flex-start; }
+      .services .content .info .right {
+        align-self: flex-end; }
+        .services .content .info .right h3 {
+          max-width: 70%; }
+        .services .content .info .right P {
+          max-width: 70%; }

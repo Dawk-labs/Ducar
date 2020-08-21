@@ -1,0 +1,36 @@
+@-webkit-keyframes nav-in {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes nav-in {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes nav-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes nav-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+/*# sourceMappingURL=animations.css.map */
