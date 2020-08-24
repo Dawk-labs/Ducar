@@ -1,0 +1,92 @@
+@import "../utils/mixins.scss";
+.products {
+  scroll-behavior: smooth;
+  margin: 0;
+  @import "../components/_navbar-large";
+  @import "../components/_navbar-mobile";
+  background-image: url("/assets/servicios.png");
+  background-color: rgba(13, 0, 72, 1);
+  background-size: 100% 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @import "../components/slide/utils/responsive-slide.scss";
+  color: white;
+  .content {
+    position: relative;
+    top: 10vh;
+    width: 100%;
+    @include tablet {
+      top: 18vh;
+    }
+    & > h1 {
+      width: 100%;
+      text-align: center;
+      font-family: "Archivo Black", sans-serif;
+      font-size: 3em;
+    }
+    section {
+      max-width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: rgba(12, 77, 164, 0.3);
+      background-blend-mode: soft-light;
+      padding: 5em;
+      text-align: center;
+      a {
+        color: white;
+        text-decoration: none;
+        .text {
+          h2 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 3em;
+          }
+          p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 2.5em;
+          }
+        }
+      }
+      @include tablet {
+        justify-content: flex-start;
+
+        .text {
+          max-width: 50%;
+        }
+        &:nth-of-type(1) {
+          flex-direction: row-reverse;
+          a {
+            .text {
+              margin-left: auto;
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          flex-direction: row-reverse;
+          a {
+            .text {
+              margin-left: auto;
+            }
+          }
+        }
+      }
+    }
+    section:nth-of-type(1) {
+      background-image: url("/assets/products/bg-1.png");
+      flex-direction: row-reverse;
+    }
+    section:nth-of-type(2) {
+      background-image: url("/assets/products/bg-2.png");
+    }
+    section:nth-of-type(3) {
+      background-image: url("/assets/products/bg-3.png");
+      flex-direction: row-reverse;
+    }
+  }
+}
