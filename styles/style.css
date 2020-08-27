@@ -939,18 +939,135 @@
         top: 18vh; } }
     .contact .content h1 {
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      font-family: "Archivo Black", sans-serif;
+      font-size: 3em; }
     .contact .content h6 {
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 1.6em;
+      letter-spacing: 0.4em; }
     .contact .content .icons {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: flex-start;
       width: 100%; }
       .contact .content .icons .item {
         display: flex;
         justify-content: center;
-        flex-direction: column; }
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1em; }
+        .contact .content .icons .item p {
+          max-width: 8em; }
+        .contact .content .icons .item a {
+          text-decoration: none;
+          color: white; }
+        .contact .content .icons .item img {
+          width: 6em; }
+    .contact .content .wrap-form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative; }
+      .contact .content .wrap-form form {
+        padding-top: 1.5em;
+        width: 85%;
+        background: linear-gradient(142.13deg, #4f96f5 0%, rgba(12, 77, 164, 0) 96.01%);
+        border-radius: 12px; }
+        @media only screen and (min-width: 768px) {
+          .contact .content .wrap-form form {
+            width: 65%; } }
+        .contact .content .wrap-form form .input-group {
+          position: relative;
+          width: 90%;
+          margin: auto; }
+          .contact .content .wrap-form form .input-group label {
+            display: inline-block;
+            margin: 1.5em 0 0.5em 0;
+            font-size: 1em;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 1em; }
+          .contact .content .wrap-form form .input-group input,
+          .contact .content .wrap-form form .input-group textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1.1em;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            color: white; }
+          .contact .content .wrap-form form .input-group textarea {
+            border: 3px solid transparent;
+            border-image: linear-gradient(45deg, #03f0ff, #3426c8);
+            border-image-slice: 1;
+            resize: none; }
+          .contact .content .wrap-form form .input-group.area label {
+            width: 100%;
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 1.8em;
+            margin-bottom: 1em; }
+          .contact .content .wrap-form form .input-group:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(45deg, #03f0ff, #3426c8); }
+          .contact .content .wrap-form form .input-group.area:after {
+            background: none; }
+        .contact .content .wrap-form form .form-submit {
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .contact .content .wrap-form form .form-submit input {
+            cursor: pointer;
+            font-family: "Anton", sans-serif;
+            font-size: 1.2em;
+            color: white;
+            letter-spacing: 0.3em;
+            text-decoration: none;
+            text-align: center;
+            height: 3em;
+            transform: translateY(50%);
+            width: 60%;
+            position: relative;
+            bottom: 0;
+            background: linear-gradient(94.8deg, rgba(52, 38, 200, 0.9) 9.26%, rgba(108, 95, 255, 0.9) 77.83%);
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+            border-radius: 10px; }
+  .contact .footer {
+    margin-top: 5em;
+    margin-bottom: 5em; }
+    .contact .footer h3,
+    .contact .footer p {
+      width: 100%;
+      text-align: center; }
+    .contact .footer h3 {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 1.5em; }
+    .contact .footer p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1em; }
+    .contact .footer .social-icons {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .contact .footer .social-icons a img {
+        width: 100%;
+        height: auto; }
 
 .services {
   margin: 0;
