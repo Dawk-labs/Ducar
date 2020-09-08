@@ -1,9 +1,14 @@
+body {
+  overflow-x: hidden;
+}
 .main {
+  float: left;
+  clear: none;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
 
-  position: fixed;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;

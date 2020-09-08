@@ -1,8 +1,13 @@
+body {
+  overflow-x: hidden; }
+
 .main {
+  float: left;
+  clear: none;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
-  position: fixed;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,137 +199,19 @@
             height: 20px; } }
 
 .services {
+  float: left;
+  clear: both;
   margin: 0;
   background-image: url("/assets/servicios.png");
   background-color: #0d0048;
   background-size: 100% 100%;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white; }
-  .services nav.larger {
-    position: absolute;
-    width: 100%;
-    height: 5vh;
-    top: 7%; }
-    .services nav.larger .navbar {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100vw;
-      display: none;
-      flex-direction: row;
-      justify-content: center;
-      position: relative;
-      padding-right: 2.3rem;
-      display: none;
-      display: none; }
-      .services nav.larger .navbar a {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.3rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        position: relative;
-        transition: all 1.8s ease-out;
-        color: #fff;
-        text-decoration: none;
-        margin-left: 2.3rem; }
-        .services nav.larger .navbar a:hover:before {
-          display: inline; }
-        .services nav.larger .navbar a:before {
-          z-index: 3;
-          content: "";
-          position: absolute;
-          display: none;
-          width: 100%;
-          bottom: -60%;
-          height: 10px;
-          background: linear-gradient(89.6deg, #3426c8 2.76%, #03f0ff 99.96%); }
-      @media only screen and (min-width: 768px) {
-        .services nav.larger .navbar {
-          display: flex; } }
-      @media only screen and (max-height: 575px) {
-        .services nav.larger .navbar {
-          display: none; } }
-  .services nav.mobile {
-    position: absolute;
-    width: 100%;
-    height: 6vh;
-    top: 0; }
-    .services nav.mobile button {
-      position: relative;
-      height: 100%;
-      width: 3rem;
-      margin: 1rem 0 0 1rem;
-      background-color: rgba(0, 0, 0, 0);
-      color: white;
-      border-color: rgba(0, 0, 0, 0); }
-    .services nav.mobile + .links {
-      left: 100%;
-      top: 0;
-      z-index: 5;
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(108, 95, 255, 0.9);
-      width: 100%;
-      height: 100%;
-      transition: 1s; }
-      .services nav.mobile + .links a {
-        margin-top: 1.5rem;
-        font-family: "Montserrat", sans-serif;
-        font-size: 3rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        position: relative;
-        color: #fff;
-        text-decoration: none; }
-      .services nav.mobile + .links button {
-        background-color: rgba(0, 0, 0, 0);
-        color: white;
-        border-color: rgba(0, 0, 0, 0);
-        position: absolute;
-        top: 1rem;
-        right: 1rem; }
-        .services nav.mobile + .links button svg {
-          width: 4rem;
-          height: 4rem; }
-
-@media only screen and (min-width: 768px) and (min-height: 575px) {
-  .services nav.mobile {
-    display: none; } }
-  @media only screen and (max-height: 650px) and (max-width: 400px) {
-    .services {
-      font-size: 0.7em; } }
-  @media only screen and (min-width: 768px) {
-    .services {
-      font-size: 1.2em;
-      flex-direction: row;
-      height: 80vh; } }
-  @media only screen and (min-width: 992px) {
-    .services {
-      font-size: 1em; } }
-  @media only screen and (min-width: 992px) and (orientation: portrait) {
-    .services {
-      font-size: 1.6em; } }
-  @media only screen and (min-width: 1200px) {
-    .services {
-      font-size: 1.8em; } }
-  @media only screen and (max-height: 650px) and (min-width: 768px) {
-    .services {
-      font-size: 0.9em; } }
-  @media only screen and (max-height: 700px) and (min-width: 768px) {
-    .services {
-      font-size: 1em; } }
   .services .content {
     position: relative;
-    top: 10vh;
     width: 100%; }
-    @media only screen and (min-width: 768px) {
-      .services .content {
-        top: 18vh; } }
     .services .content section {
       position: relative;
       left: 50%;
@@ -616,7 +503,10 @@
               margin-left: auto; } }
     .products .content section:nth-of-type(1) {
       background-image: url("/assets/products/bg-1.png");
-      flex-direction: row-reverse; }
+      flex-direction: row-reverse;
+      transition: 1s; }
+      .products .content section:nth-of-type(1):hover {
+        background-size: 150%; }
     .products .content section:nth-of-type(2) {
       background-image: url("/assets/products/bg-2.png"); }
     .products .content section:nth-of-type(3) {
@@ -1070,137 +960,19 @@
         height: auto; }
 
 .services {
+  float: left;
+  clear: both;
   margin: 0;
   background-image: url("/assets/servicios.png");
   background-color: #0d0048;
   background-size: 100% 100%;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white; }
-  .services nav.larger {
-    position: absolute;
-    width: 100%;
-    height: 5vh;
-    top: 7%; }
-    .services nav.larger .navbar {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100vw;
-      display: none;
-      flex-direction: row;
-      justify-content: center;
-      position: relative;
-      padding-right: 2.3rem;
-      display: none;
-      display: none; }
-      .services nav.larger .navbar a {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.3rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        position: relative;
-        transition: all 1.8s ease-out;
-        color: #fff;
-        text-decoration: none;
-        margin-left: 2.3rem; }
-        .services nav.larger .navbar a:hover:before {
-          display: inline; }
-        .services nav.larger .navbar a:before {
-          z-index: 3;
-          content: "";
-          position: absolute;
-          display: none;
-          width: 100%;
-          bottom: -60%;
-          height: 10px;
-          background: linear-gradient(89.6deg, #3426c8 2.76%, #03f0ff 99.96%); }
-      @media only screen and (min-width: 768px) {
-        .services nav.larger .navbar {
-          display: flex; } }
-      @media only screen and (max-height: 575px) {
-        .services nav.larger .navbar {
-          display: none; } }
-  .services nav.mobile {
-    position: absolute;
-    width: 100%;
-    height: 6vh;
-    top: 0; }
-    .services nav.mobile button {
-      position: relative;
-      height: 100%;
-      width: 3rem;
-      margin: 1rem 0 0 1rem;
-      background-color: rgba(0, 0, 0, 0);
-      color: white;
-      border-color: rgba(0, 0, 0, 0); }
-    .services nav.mobile + .links {
-      left: 100%;
-      top: 0;
-      z-index: 5;
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(108, 95, 255, 0.9);
-      width: 100%;
-      height: 100%;
-      transition: 1s; }
-      .services nav.mobile + .links a {
-        margin-top: 1.5rem;
-        font-family: "Montserrat", sans-serif;
-        font-size: 3rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        position: relative;
-        color: #fff;
-        text-decoration: none; }
-      .services nav.mobile + .links button {
-        background-color: rgba(0, 0, 0, 0);
-        color: white;
-        border-color: rgba(0, 0, 0, 0);
-        position: absolute;
-        top: 1rem;
-        right: 1rem; }
-        .services nav.mobile + .links button svg {
-          width: 4rem;
-          height: 4rem; }
-
-@media only screen and (min-width: 768px) and (min-height: 575px) {
-  .services nav.mobile {
-    display: none; } }
-  @media only screen and (max-height: 650px) and (max-width: 400px) {
-    .services {
-      font-size: 0.7em; } }
-  @media only screen and (min-width: 768px) {
-    .services {
-      font-size: 1.2em;
-      flex-direction: row;
-      height: 80vh; } }
-  @media only screen and (min-width: 992px) {
-    .services {
-      font-size: 1em; } }
-  @media only screen and (min-width: 992px) and (orientation: portrait) {
-    .services {
-      font-size: 1.6em; } }
-  @media only screen and (min-width: 1200px) {
-    .services {
-      font-size: 1.8em; } }
-  @media only screen and (max-height: 650px) and (min-width: 768px) {
-    .services {
-      font-size: 0.9em; } }
-  @media only screen and (max-height: 700px) and (min-width: 768px) {
-    .services {
-      font-size: 1em; } }
   .services .content {
     position: relative;
-    top: 10vh;
     width: 100%; }
-    @media only screen and (min-width: 768px) {
-      .services .content {
-        top: 18vh; } }
     .services .content section {
       position: relative;
       left: 50%;
