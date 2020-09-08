@@ -615,12 +615,12 @@
             .products .content section:nth-of-type(3) a .text {
               margin-left: auto; } }
     .products .content section:nth-of-type(1) {
-      background-image: url("../assets/products/bg-1.png");
+      background-image: url("/assets/products/bg-1.png");
       flex-direction: row-reverse; }
     .products .content section:nth-of-type(2) {
-      background-image: url("../assets/products/bg-2.png"); }
+      background-image: url("/assets/products/bg-2.png"); }
     .products .content section:nth-of-type(3) {
-      background-image: url("../assets/products/bg-3.png");
+      background-image: url("/assets/products/bg-3.png");
       flex-direction: row-reverse; }
 
 .products-list {
@@ -1210,10 +1210,10 @@
       text-align: center; }
       .services .content section h3 {
         font-family: "Archivo Black", sans-serif;
-        font-size: 1.25em; }
+        font-size: 4em; }
       .services .content section p {
         font-family: "Montserrat", sans-serif;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1em; }
     .services .content .steps {
       display: flex;
