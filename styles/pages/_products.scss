@@ -1,24 +1,22 @@
 @import "../utils/mixins.scss";
 .products {
+  float: left;
+  clear: both;
+  width: 100%;
   scroll-behavior: smooth;
   margin: 0;
-  @import "../components/_navbar-large";
-  @import "../components/_navbar-mobile";
   background-image: url("/assets/servicios.png");
   background-color: rgba(13, 0, 72, 1);
   background-size: 100% 100%;
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  @import "../components/slide/utils/responsive-slide.scss";
   color: white;
   .content {
     position: relative;
     top: 10vh;
     width: 100%;
-    @include tablet {
-      top: 18vh;
-    }
+
     & > h1 {
       width: 100%;
       text-align: center;
