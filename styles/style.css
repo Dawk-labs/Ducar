@@ -334,7 +334,7 @@
       text-align: center; }
       .services .content section h3 {
         font-family: "Archivo Black", sans-serif;
-        font-size: 1.25em; }
+        font-size: 4em; }
       .services .content section p {
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
@@ -768,10 +768,10 @@
     .products-list .content > p {
       margin: auto;
       text-align: center;
-      width: 38%;
+      width: 60%;
       font-family: "Montserrat", sans-serif;
       font-style: normal;
-      font-weight: 600; }
+      font-weight: 500; }
     .products-list .content .grid {
       position: relative;
       max-width: 90%;
