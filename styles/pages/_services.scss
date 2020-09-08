@@ -1,23 +1,21 @@
+@import "../utils/mixins.scss";
 .services {
+  float: left;
+  clear: none;
   margin: 0;
-  @import "../components/_navbar-large";
-  @import "../components/_navbar-mobile";
   background-image: url("/assets/servicios.png");
   background-color: rgba(13, 0, 72, 1);
   background-size: 100% 100%;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  @import "../components/slide/utils/responsive-slide.scss";
   color: white;
 
   .content {
     position: relative;
-    top: 10vh;
+
     width: 100%;
-    @include tablet {
-      top: 18vh;
-    }
+
     section {
       position: relative;
       left: 50%;
@@ -28,11 +26,11 @@
       text-align: center;
       h3 {
         font-family: "Archivo Black", sans-serif;
-        font-size: 1.25em;
+        font-size: 4em;
       }
       p {
         font-family: "Montserrat", sans-serif;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1em;
       }
     }

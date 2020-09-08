@@ -2,26 +2,24 @@ $gradient: linear-gradient(45deg, rgba(3, 240, 255, 1), rgba(52, 38, 200, 1));
 @import "../utils/mixins.scss";
 
 .contact {
-  scroll-behavior: smooth;
+  position: relative;
+  float: left;
+  clear: both;
   margin: 0;
-  @import "../components/_navbar-large";
-  @import "../components/_navbar-mobile";
   background-image: url("/assets/servicios.png");
   background-color: rgba(13, 0, 72, 1);
   background-size: 100% 100%;
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  @import "../components/slide/utils/responsive-slide.scss";
   color: white;
+
+  width: 100%;
   .content {
     position: relative;
-    top: 10vh;
+    margin-top: 15vh;
     width: 100%;
 
-    @include tablet {
-      top: 18vh;
-    }
     h1 {
       width: 100%;
       text-align: center;

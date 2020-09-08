@@ -1,6 +1,5 @@
 @import "../utils/mixins.scss";
 .products-list {
-  scroll-behavior: smooth;
   margin: 0;
   @import "../components/_navbar-large";
   @import "../components/_navbar-mobile";
@@ -34,11 +33,11 @@
     & > p {
       margin: auto;
       text-align: center;
-      width: 38%;
+      width: 60%;
 
       font-family: "Montserrat", sans-serif;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
     }
     .grid {
       position: relative;
