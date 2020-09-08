@@ -1,6 +1,9 @@
 body {
   overflow-x: hidden;
 }
+* {
+  scroll-behavior: smooth;
+}
 .main {
   float: left;
   clear: none;
