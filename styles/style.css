@@ -369,7 +369,7 @@ body {
       background-blend-mode: soft-light;
       padding: 5em;
       text-align: center;
-      transition: background 1s linear; }
+      transition: background 1s ease-in-out; }
       .products .content section a {
         color: white;
         text-decoration: none; }
@@ -701,6 +701,8 @@ body {
             letter-spacing: 0.3em;
             text-decoration: none;
             text-align: center;
+            background-size: 200%;
+            transition: background 1s ease;
             height: 3em;
             transform: translateY(50%);
             width: 60%;
@@ -709,6 +711,8 @@ body {
             background: linear-gradient(94.8deg, rgba(52, 38, 200, 0.9) 9.26%, rgba(108, 95, 255, 0.9) 77.83%);
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
             border-radius: 10px; }
+            .contact .content .wrap-form form .form-submit input:hover {
+              background-position: right; }
   .contact .footer {
     margin-top: 5em;
     margin-bottom: 5em; }

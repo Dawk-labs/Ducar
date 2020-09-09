@@ -137,6 +137,9 @@ $gradient: linear-gradient(45deg, rgba(3, 240, 255, 1), rgba(52, 38, 200, 1));
           align-items: center;
           justify-content: center;
           input {
+            &:hover {
+              background-position: right;
+            }
             cursor: pointer;
             font-family: "Anton", sans-serif;
             font-size: 1.2em;
@@ -144,7 +147,8 @@ $gradient: linear-gradient(45deg, rgba(3, 240, 255, 1), rgba(52, 38, 200, 1));
             letter-spacing: 0.3em;
             text-decoration: none;
             text-align: center;
-
+            background-size: 200%;
+            transition: background 1s ease;
             height: 3em;
             transform: translateY(50%);
             width: 60%;
@@ -155,7 +159,6 @@ $gradient: linear-gradient(45deg, rgba(3, 240, 255, 1), rgba(52, 38, 200, 1));
               rgba(52, 38, 200, 0.9) 9.26%,
               rgba(108, 95, 255, 0.9) 77.83%
             );
-
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
             border-radius: 10px;
           }
