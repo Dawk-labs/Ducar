@@ -14,7 +14,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000; }
+  background-image: url("/assets/Background.png");
+  background-size: 100% 100%; }
+  @media only screen and (min-width: 768px) {
+    .main {
+      background-image: url("/assets/Back-large.png"); } }
   .main nav.larger {
     position: absolute;
     width: 100%;
