@@ -363,12 +363,13 @@ body {
       align-items: center;
       justify-content: center;
       background-position: center;
-      background-size: cover;
+      background-size: 100% 100%;
       background-repeat: no-repeat;
       background-color: rgba(12, 77, 164, 0.3);
       background-blend-mode: soft-light;
       padding: 5em;
-      text-align: center; }
+      text-align: center;
+      transition: background 1s linear; }
       .products .content section a {
         color: white;
         text-decoration: none; }
@@ -391,12 +392,11 @@ body {
             flex-direction: row-reverse; }
             .products .content section:nth-of-type(3) a .text {
               margin-left: auto; } }
+    .products .content section:hover {
+      background-size: 150% 150%; }
     .products .content section:nth-of-type(1) {
       background-image: url("/assets/products/bg-1.png");
-      flex-direction: row-reverse;
-      transition: 1s; }
-      .products .content section:nth-of-type(1):hover {
-        background-size: 150%; }
+      flex-direction: row-reverse; }
     .products .content section:nth-of-type(2) {
       background-image: url("/assets/products/bg-2.png"); }
     .products .content section:nth-of-type(3) {
