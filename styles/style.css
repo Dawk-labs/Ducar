@@ -114,7 +114,8 @@ body {
     display: none; } }
   .main .slider {
     position: relative;
-    width: 100%; }
+    overflow: hidden;
+    width: 100vw; }
     .main .slider button {
       cursor: pointer;
       background-color: rgba(1, 1, 1, 0);

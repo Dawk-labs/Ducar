@@ -1,6 +1,6 @@
-const navBarM = document.getElementById("nav-m");
-const closeNavM = document.getElementById("closeNav");
-const openNavM = document.getElementById("openNav");
+var navBarM = document.getElementById("nav-m");
+var closeNavM = document.getElementById("closeNav");
+var openNavM = document.getElementById("openNav");
 openNavM.onclick = () => {
   navBarM.style.left = "0";
 };

@@ -2,8 +2,8 @@
 @import "../utils/mixins.scss";
 .slider {
   position: relative;
-  width: 100%;
-
+  overflow: hidden;
+  width: 100vw;
   @import "../components/arrows";
   .content-slider {
     display: flex;
