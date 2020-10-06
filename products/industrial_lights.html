@@ -9,18 +9,27 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <script src="../scripts/nav.js"></script>
     <script src="../scripts/nav.js"></script>
   </head>
   <body class="products-list">
-    <nav class="larger">
+    <div class="logo">
+      <a href="/">
+      <img data-aos="fade-up"
+      data-aos-duration="1000" src="../assets/logo.png" alt="DUCAR SERVICES LLC" >
+      </a>
+      </div>
+    <nav data-aos="fade-up"
+    data-aos-duration="1000" class="larger">
       <div class="navbar">
-        <a href="/">Home</a>
+        <a href="../">Home</a>
 
-        <a href="/services.html">Services</a>
+        <a href="../#services">Services</a>
 
-        <a href="/products/">Products</a>
+        <a href="../#products">Products</a>
 
-        <a href="/">Contact</a>
+        <a href="../#contact">Contact</a>
       </div>
     </nav>
     <nav class="mobile">
@@ -61,23 +70,27 @@
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
-      <a href="/">Home</a>
+      <a href="../">Home</a>
 
-      <a href="/services.html">Services</a>
+      <a href="../#services">Services</a>
 
-      <a href="/products/">Products</a>
+      <a href="../#products">Products</a>
 
-      <a href="/">Contact</a>
+      <a href="../#contact">Contact</a>
     </div>
     <div class="content">
-      <h1>Efficiency is now</h1>
-      <h1>everywhere</h1>
-      <p>
+      <h1 data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000">Efficiency is now</h1>
+      <h1 data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="3000" data-aos-delay="200">everywhere</h1>
+      <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
         Improve, produce and work more safety and efficiency while savings,
         exploding the potential of our Industrials and Commercials LED lighting
         system.
       </p>
-      <div class="grid">
+      <div data-aos="fade-up" data-aos-duration="2500" data-aos-delay="500" class="grid">
         <div class="item">
           <img src="../assets/products/industrial/ind-1.jpg" alt="" />
           <p>
@@ -110,5 +123,9 @@
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

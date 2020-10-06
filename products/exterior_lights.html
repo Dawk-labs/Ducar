@@ -10,17 +10,44 @@
     />
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="../scripts/nav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <script src="https://kit.fontawesome.com/66d2177b9a.js" crossorigin="anonymous"></script>
   </head>
   <body class="products-list">
-    <nav class="larger">
+    <div class="arriba">
+      <a href="#" class="to-top">
+        <i class="fas fa-chevron-circle-up"></i>
+      </a>
+    </div>
+    
+    <script type="text/javascript">
+
+      const toTop = document.querySelector(".to-top");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 50 ){
+          toTop.classList.add("active");} else {
+            toTop.classList.remove("active");
+          }
+        });
+
+    </script>
+
+    <div class="logo">
+      <a href="/">
+      <img data-aos="fade-up"
+      data-aos-duration="1000" src="../assets/logo.png" alt="DUCAR SERVICES LLC" >
+      </a>
+      </div>
+    <nav data-aos="fade-up"
+    data-aos-duration="1000" class="larger">
       <div class="navbar">
-        <a href="/">Home</a>
+        <a href="../">Home</a>
 
-        <a href="/index.html/#services">Services</a>
+        <a href="../#services">Services</a>
 
-        <a href="/index.html/#products">Products</a>
+        <a href="../#products">Products</a>
 
-        <a href="/index.html/#contact">Contact</a>
+        <a href="../#contact">Contact</a>
       </div>
     </nav>
     <nav class="mobile">
@@ -63,20 +90,24 @@
       </button>
       <a href="/">Home</a>
 
-      <a href="/../#services">Services</a>
+      <a href="../#services">Services</a>
 
-      <a href="/../#products">Products</a>
+      <a href="../#products">Products</a>
 
-      <a href="/..#contact">Contact</a>
+      <a href="../#contact">Contact</a>
     </div>
     <div class="content">
-      <h1>Experience a High</h1>
-      <h1>Definition difference</h1>
-      <p>
+      <h1 data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000">Experience a High</h1>
+      <h1 data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="3000" >Definition difference</h1>
+      <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
         Each one of our products goes beyond light to give you benefits like
         convenience, security, entertainment, and more.
       </p>
-      <div class="grid">
+      <div data-aos="fade-up" data-aos-duration="2500" data-aos-delay="500" class="grid">
         <div class="item">
           <!-- roof  -->
           <img src="../assets/products/exterior/roof-1.jpg" alt="" />
@@ -228,4 +259,8 @@
       </div>
     </div>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </html>
