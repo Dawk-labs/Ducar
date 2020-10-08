@@ -16,20 +16,9 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
     
-    <script src="<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="https://kit.fontawesome.com/66d2177b9a.js" crossorigin="anonymous"></script>
-
-   </head>
- <body>
-  <div class="main">
-    
-    <div class="arriba">
-      <a href="#" class="to-top">
-        <i class="fas fa-chevron-circle-up"></i>
-      </a>
-    </div>
-    
     <script type="text/javascript">
 
       const toTop = document.querySelector(".to-top");
@@ -41,6 +30,27 @@
         });
 
     </script>
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 5000);
+      </script>
+   </head>
+ <body>
+  <div class="main">
+    
+    <div class="arriba">
+      <a href="#" class="to-top">
+        <i class="fas fa-chevron-circle-up"></i>
+      </a>
+    </div>
+    
+   
 
      <nav data-aos="fade-up"
      data-aos-duration="1000" class="larger">
@@ -74,9 +84,9 @@
      </nav>
      <div class="links" id="nav-m">
 
- <button id="closeNav">
-   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-   </button>
+        <button id="closeNav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
    
        <a href="/">Home</a>
  
@@ -137,16 +147,7 @@
     </div>
     <!--image slider end-->
  
-    <script type="text/javascript">
-      var counter = 1;
-      setInterval(function(){
-        document.getElementById('radio' + counter).checked = true;
-        counter++;
-        if(counter > 4){
-          counter = 1;
-        }
-      }, 5000);
-      </script>
+    
       
   </div>
   <section  id="services" class="services">
