@@ -19,6 +19,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="https://kit.fontawesome.com/66d2177b9a.js" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LcQLNkZAAAAALt-7Lui0EOKWNUGijlCnlvJrfez'
+        });
+      };
+    </script>
+
     <script type="text/javascript">
 
       const toTop = document.querySelector(".to-top");
@@ -259,8 +268,8 @@
       </div>
       <h6 data-aos="flip-left"  data-aos-duration="1000"  data-aos-delay="500" >START YOUR PROJECT NOW</h6>
       <div data-aos="zoom-in" data-aos-duration="1000"  data-aos-delay="500" class="wrap-form">
-        <form action="https://submit-form.com/rfPM0Ez7WGnAWw1I4BBeK">
-          <div class="input-group">
+        <form action="https://submit-form.com/ijo4GT7eEhrXELbFdwzZQ">
+          <div class="input-group" id="html_element">
             <label for="name">Full Name</label>
             <input
               class="form-control"
@@ -270,7 +279,7 @@
               required
             />
           </div>
-          <div class="input-group">
+          <div class="input-group" id="html_element">
             <label for="email">E-mail</label>
             <input
               class="form-control"
@@ -280,7 +289,7 @@
               required
             />
           </div>
-          <div class="input-group">
+          <div class="input-group" id="html_element">
             <label for="phone">Phone Number</label>
             <input
               type="text"
@@ -290,9 +299,9 @@
               required
             />
           </div>
-          <div class="input-group area">
+          <div class="input-group area" id="html_element">
             <label for=""> Messages or Questions</label
-            ><textarea name="more" id="" cols="30" rows="5"></textarea>
+            ><textarea name="messages" id="" cols="30" rows="5" required></textarea>
           </div>
           <div class="form-submit">
             <input type="submit" value="Submit" />
@@ -318,6 +327,8 @@
       </div>
     </div>
   </section>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer> </script>
       <script src="scripts/main.js"></script>
       <script src="scripts/nav.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
